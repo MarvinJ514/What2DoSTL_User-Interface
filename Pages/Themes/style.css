@@ -235,3 +235,39 @@ nav.pagebuttons>ul li a:hover {
 #address{
     color:white;
 }
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 1px solid;
+}
+.preferences {
+    column-count: 5;
+}
+.userinfo{
+    width: 300px;
+    text-align: center;
+    margin-left: 33%;
+    border: none;
+    padding-top:25px;
+}
+.userinfo input[type=text], input[type=password],input[type=date],input[type=integer] {
+    width: 100%;
+    height: 25px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.useraccount .pagebuttons{
+    margin-left: 38%
+}
+.usercreation .pagebuttons{
+    margin-left: 35%
+}
+.guest .pagebuttons{
+    margin-left: 43%
+}

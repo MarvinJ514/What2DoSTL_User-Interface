@@ -24,45 +24,125 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    var topChoiceTemplate = $("#Top_template").html();
-    Mustache.parse(topChoiceTemplate);
+    var PrefTemplateTemplate = $("#Pref_template").html();
+    Mustache.parse(PrefTemplateTemplate);
 
-    var topRendered = Mustache.render(topChoiceTemplate, {
-        logo: [
+    var prefRendered = Mustache.render(PrefTemplateTemplate, {
+        choices: [
             {
-                heading:"Movies",
-                div_id: "movie",
-                aria: "Netflix Logo Link",
-                a_id: "linkBlack",
-                ref: "https://www.netflix.com",
-                img_src: "images/netflix_logo.jpg"
+                input_id: "concerts",
+                input_label: "Concerts"
             },
             {
-                heading:"Television",
-                div_id: "TV",
-                aria: "Hulu Logo Link",
-                a_id: "linkWhite",
-                ref: "https://www.hulu.com",
-                img_src: "images/hulu-logo.png"
+                input_id: "rock",
+                input_label: "Rock Music"
             },
             {
-                heading:"Music",
-                div_id: "Music",
-                aria: "Spotify Logo Link",
-                a_id: "linkWhite",
-                ref: "https://www.spotify.com",
-                img_src: "images/spotify_logo.jpg"
+                input_id: "hiphop",
+                input_label: "Hip hop Music"
             },
             {
-                heading:"Sports",
-                div_id: "Sports",
-                aria: "DAZN Logo Link",
-                a_id: "linkWhite",
-                ref: "https://watch.dazn.com/en-US/sports/",
-                img_src: "images/dazn-logo.jpg"
+                input_id: "country",
+                input_label: "Country Music"
+            },
+            {
+                input_id: "jazz",
+                input_label: "Jazz Music"
+            },
+            {
+                input_id: "pop",
+                input_label: "Pop Music"
+            },
+            {
+                input_id: "classical",
+                input_label: "Classical Music"
+            },
+            {
+                input_id: "folk",
+                input_label: "Folk Music"
+            },
+            {
+                input_id: "indoor",
+                input_label: "Indoor Venue"
+            },
+            {
+                input_id: "outdoor",
+                input_label: "Outdoor Venue"
+            },
+            {
+                input_id: "sports",
+                input_label: "Sports"
+            },
+            {
+                input_id: "baseball",
+                input_label: "Baseball"
+            },
+            {
+                input_id: "hockey",
+                input_label: "Hockey"
+            },
+            {
+                input_id: "soccer",
+                input_label: "Soccer"
+            },
+            {
+                input_id: "football",
+                input_label: "Football"
+            },
+            {
+                input_id: "basketball",
+                input_label: "Basketball"
+            },
+            {
+                input_id: "tennis",
+                input_label: "Tennis"
+            },
+            {
+                input_id: "parks",
+                input_label: "Parks (nature)"
+            },
+            {
+                input_id: "amusement_park",
+                input_label: "Amusement Park"
+            },
+            {
+                input_id: "brewery",
+                input_label: "Breweries"
+            },
+            {
+                input_id: "winery",
+                input_label: "Wineries"
+            },
+            {
+                input_id: "bar",
+                input_label: "Bars"
+            },
+            {
+                input_id: "festival",
+                input_label: "Festivals"
+            },
+            {
+                input_id: "camping",
+                input_label: "Camping"
+            },
+            {
+                input_id: "conventions",
+                input_label: "Conventions"
+            },
+            {
+                input_id: "theater",
+                input_label: "Performing Arts"
+            },
+            {
+                input_id: "comedy",
+                input_label: "Comedy"
+            },
+            {
+                input_id: "museums",
+                input_label: "Museums"
             },
         ],
         show: false
     })
-    $("#topChoice_template").html(topRendered);
+    $("#preferences").html(prefRendered);
 });
