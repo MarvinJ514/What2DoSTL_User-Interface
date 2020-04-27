@@ -1,9 +1,10 @@
 body{line-height:1; font-family: Georgia, 'Times New Roman', Times, serif}
 form {border: 3px solid #f1f1f1;}
 
-input[type=text], input[type=password] {
+.modal input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
+    height: 30px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
