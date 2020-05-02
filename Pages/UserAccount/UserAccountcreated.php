@@ -16,6 +16,9 @@
         <script type="text/javascript" src="../JS/mustache.js"></script>
         <script type="text/javascript" src="../JS/HomeData.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script type="text/JavaScript">
+            alert('You have registered your account, Please fill out update preferences accordingly')
+        </script>
     </head>
 
     <body>
@@ -33,6 +36,7 @@
             </div>
         </div>
         <section id="pageContent" aria-label="Prefrence Choices" class="useraccount">
+            <p>Welcome! Let's get started</p><br><br>
             <form action="/action_page.php">
                 <fieldset>
                     <legend>Update your preferences:</legend>
@@ -51,13 +55,9 @@
                     <input type="date" id="date" name="date"><br><br>
                     <label for="budget">Budget:</label>
                     <input type="integer" id="budget" name="budget"><br><br>
+                    <button type="submit" class="prefButton">Continue</button>
                 </fieldset>
             </form>
-            <nav class="pagebuttons">
-                <ul>
-                    <li><a href="#">Continue</a>
-                </ul>  
-            </nav>
         </section>
         <footer>
             <p>&copy; 2020, Edited by Marvin Johnson </p>

@@ -1,9 +1,9 @@
 <?php
     session_start();
-    // Change this to your connection info.
+    // Connection Info
     $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'e6wJMkJLvJ4c';
+    $DATABASE_USER = 'what2dostl';
+    $DATABASE_PASS = '1q2w#E$R1q2w#E$R';
     $DATABASE_NAME = 'phplogin';
     // Try and connect using the info above.
     $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
@@ -28,7 +28,8 @@
             $stmt->fetch();
             // Account exists, now we verify the password.
             // Note: remember to use password_hash in your registration file to store the hashed passwords.
-            if (password_verify($_POST['password'], $password)) {
+            //if (password_verify($_POST['password'], $password)) {
+            if (password_verify($_POST['password'], $password)){
                 // Verification success! User has loggedin!
                 // Create sessions so we know the user is logged in, they basically act like cookies but remember the data on the server.
                 session_regenerate_id();
@@ -36,14 +37,16 @@
                 $_SESSION['name'] = $_POST['email'];
                 $_SESSION['id'] = $id;
                 //echo 'Welcome ' . $_SESSION['name'] . '!';
-                header('Location: ./Pages/UserAccount/UserAccount.html');
+                header('Location: ../Pages/UserAccount/UserAccountLogin.php');
             } else {
-                echo 'Incorrect password!';
+                //echo 'Incorrect password!';
+                header('Location: ../homeFailedLogin.html');
             }
         } else {
-            echo 'Incorrect username!';
-        }
-
+            //echo 'Incorrect username!';
+            header('Location: ../homeFailedLogin.html');
+            
+        } 
         $stmt->close();
     }
 ?>

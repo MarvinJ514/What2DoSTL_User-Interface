@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <?php
+        // We need to use sessions, so you should always start sessions using the below code.
+        session_start();
+        // If the user is not logged in redirect to the login page...
+        if (!isset($_SESSION['loggedin'])) {
+            header('Location: ../../home.html');
+            exit;
+        }
+    ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +24,9 @@
         <script type="text/javascript" src="../JS/mustache.js"></script>
         <script type="text/javascript" src="../JS/HomeData.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script type="text/JavaScript">
+            alert('You have successfully Logged in, Please fill out preferences accordingly and hit Continue to make a search')
+        </script>
     </head>
 
     <body>
@@ -33,6 +44,7 @@
             </div>
         </div>
         <section id="pageContent" aria-label="Prefrence Choices" class="useraccount">
+            <p>Welcome back, <?=$_SESSION['name']?>!</p><br><br>
             <form action="/action_page.php">
                 <fieldset>
                     <legend>Update your preferences:</legend>
@@ -51,13 +63,9 @@
                     <input type="date" id="date" name="date"><br><br>
                     <label for="budget">Budget:</label>
                     <input type="integer" id="budget" name="budget"><br><br>
+                    <button type="submit" class="prefButton">Continue</button>
                 </fieldset>
             </form>
-            <nav class="pagebuttons">
-                <ul>
-                    <li><a href="#">Continue</a>
-                </ul>  
-            </nav>
         </section>
         <footer>
             <p>&copy; 2020, Edited by Marvin Johnson </p>
