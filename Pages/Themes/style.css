@@ -73,7 +73,13 @@ body,html {
 .logo{
     display: inline;
 }
-
+a{
+    color: #05386B;
+    text-decoration: underline;
+}
+a:hover{
+    color: #379683;
+}
 @media screen and (min-width: 768px){
     .container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse {
         margin-right: 0;
@@ -103,7 +109,6 @@ nav {
 }
 nav ul li a {
     background: #EDF5E1;
-    
     padding: 10px;
     font-size: 15px;
     text-decoration: none;
@@ -197,6 +202,13 @@ body > section {
     color: rgb(0,0,0);
     height: 675px;
 }
+.results{
+    height: auto;
+}
+.resultSection{
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+}
 #introduction{
     font-size: 25px;
     line-height: 1.5;
@@ -220,7 +232,26 @@ nav.pagebuttons>ul li a:hover {
     color: #379683;
     border: 1px solid #379683;
 }
-
+nav.pagebuttons2{
+    float: none;
+    margin-left: 43%;
+    padding-top:5px;
+    
+}
+nav.pagebuttons2>ul li a{
+    
+    background: #379683 ;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #EDF5E1;
+    border-radius: 10px;
+}
+nav.pagebuttons2>ul li a:hover {
+    background: #EDF5E1;
+    color: #379683;
+    border: 1px solid #379683;
+}
 @media screen and (max-width: 1000px) {
 	body > section {
 		padding: 30px 20px;
@@ -273,6 +304,9 @@ fieldset {
 }
 .guest .pagebuttons{
     margin-left: 43%
+}
+.QueryPagebuttons{
+    margin-left:45%
 }
 input[type=submit] {
     background: #379683 ;

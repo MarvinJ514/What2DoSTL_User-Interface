@@ -45,13 +45,13 @@
         </div>
         <section id="pageContent" aria-label="Prefrence Choices" class="useraccount">
             <p>Welcome back, <?=$_SESSION['name']?>!</p><br><br>
-            <form action="/action_page.php">
+            <form action="../../App/preferenceQueryLoggedIn.php" method="post">
                 <fieldset>
-                    <legend>Update your preferences:</legend>
+                    <legend>Choose your preferences:</legend>
                     <script id="Pref_template" type="x-tmpl-mustache">
                         {{#choices}}
                             <div>
-                                <input type="checkbox" id="{{input_id}}" name="{{input_id}}">
+                                <input type="checkbox" id="{{input_id}}" name="formPreferences[]" value="{{input_id}}">
                                 <label for="{{input_id}}">{{input_label}}</label>
                             </div>
                         {{/choices}}

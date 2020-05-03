@@ -16,9 +16,6 @@
         <script type="text/javascript" src="../JS/mustache.js"></script>
         <script type="text/javascript" src="../JS/HomeData.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-        <script type="text/JavaScript">
-            alert('You have registered your account, Please fill out update preferences accordingly')
-        </script>
     </head>
 
     <body>

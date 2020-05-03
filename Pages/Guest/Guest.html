@@ -33,7 +33,7 @@
             </div>
         </div>
         <section id="pageContent" aria-label="Prefrence Choices" class="guest">
-            <form action="../../App/preferenceQuery.php" method="post">
+            <form action="../../App/preferenceQuery2.php" method="post">
                 <fieldset>
                     <legend>Choose your preferences:</legend>
                     <script id="Pref_template" type="x-tmpl-mustache">
@@ -48,9 +48,9 @@
                 </fieldset>
                 <fieldset class="userinfo">
                     <label for="date">Projected Date:</label>
-                    <input type="date" id="date" name="formPreferences[]"><br><br>
+                    <input type="date" id="date" name="date"><br><br>
                     <label for="budget">Budget:</label>
-                    <input type="integer" id="budget" name="formPreferences[]"><br><br>
+                    <input type="integer" id="budget" name="budget"><br><br>
                     <button type="submit" class="prefButton">Continue</button>
                 </fieldset>
             </form>

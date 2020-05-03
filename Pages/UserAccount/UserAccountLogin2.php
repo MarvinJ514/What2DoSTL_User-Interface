@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <?php
+        // We need to use sessions, so you should always start sessions using the below code.
+        session_start();
+        // If the user is not logged in redirect to the login page...
+        if (!isset($_SESSION['loggedin'])) {
+            header('Location: ../../home.html');
+            exit;
+        }
+    ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +24,6 @@
         <script type="text/javascript" src="../JS/mustache.js"></script>
         <script type="text/javascript" src="../JS/HomeData.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-        <script type="text/JavaScript">
-            alert('You have registered your account, Please fill out update preferences accordingly')
-        </script>
     </head>
 
     <body>
@@ -36,8 +41,8 @@
             </div>
         </div>
         <section id="pageContent" aria-label="Prefrence Choices" class="useraccount">
-            <p>Welcome! Let's get started</p><br><br>
-            <form action="../../App/preferenceQueryCreated.php" method="post">
+            <p>Welcome back, <?=$_SESSION['name']?>!</p><br><br>
+            <form action="../../App/preferenceQueryLoggedIn.php" method="post">
                 <fieldset>
                     <legend>Choose your preferences:</legend>
                     <script id="Pref_template" type="x-tmpl-mustache">

@@ -33,13 +33,13 @@
             </div>
         </div>
         <section id="pageContent" aria-label="Prefrence Choices" class="useraccount">
-            <form action="/action_page.php">
+            <form action="../../App/preferenceQuery2.php" method="post">
                 <fieldset>
-                    <legend>Update your preferences:</legend>
+                    <legend>Choose your preferences:</legend>
                     <script id="Pref_template" type="x-tmpl-mustache">
                         {{#choices}}
                             <div>
-                                <input type="checkbox" id="{{input_id}}" name="{{input_id}}">
+                                <input type="checkbox" id="{{input_id}}" name="formPreferences[]" value="{{input_id}}">
                                 <label for="{{input_id}}">{{input_label}}</label>
                             </div>
                         {{/choices}}
@@ -51,13 +51,9 @@
                     <input type="date" id="date" name="date"><br><br>
                     <label for="budget">Budget:</label>
                     <input type="integer" id="budget" name="budget"><br><br>
+                    <button type="submit" class="prefButton">Continue</button>
                 </fieldset>
             </form>
-            <nav class="pagebuttons">
-                <ul>
-                    <li><a href="#">Continue</a>
-                </ul>  
-            </nav>
         </section>
         <footer>
             <p>&copy; 2020, Edited by Marvin Johnson </p>

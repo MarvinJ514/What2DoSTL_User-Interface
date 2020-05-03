@@ -130,7 +130,7 @@ $(document).ready(function(){
                 input_label: "Conventions"
             },
             {
-                input_id: "theater",
+                input_id: "arts",
                 input_label: "Performing Arts"
             },
             {
